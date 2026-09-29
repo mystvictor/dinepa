@@ -10,7 +10,5 @@ Prototype web de présentation de l'offre technique.
 
 ## Utilisation
 
-Ouvrir `index.html` dans un navigateur moderne.
-
 Le bouton « Imprimer / PDF » utilise la boîte d'impression native du navigateur.
 Pour un rendu PDF propre, sélectionner « Enregistrer au format PDF ».

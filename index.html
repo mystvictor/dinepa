@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Offre technique Numerech — Portail Numérique de Services et de Relation Usager DINEPA">
+  <title>Offre Technique DINEPA — Numerech</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./numerech-logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./numerech-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="topbar no-print">
+    <div class="topbar-inner">
+      <a class="brand" href="#cover" aria-label="Retour à la couverture">
+        <img src="logo-numerech.png" alt="Numerech" class="numerech-logo topbar-logo">
+      </a>
+
+      <div class="document-label">
+        <span class="document-dot"></span>
+        Offre technique · DINEPA
+      </div>
+
+      <div class="top-actions">
+        <!-- <button class="icon-button" id="themeToggle" type="button" title="Changer l'apparence" aria-label="Changer l'apparence">◐</button> -->
+        <button class="print-button" id="printButton" type="button">Imprimer / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="progress-bar no-print"><span id="progress"></span></div>
+
+  <div class="layout">
+
+    <aside class="sidebar no-print">
+      <div class="sidebar-card">
+        <div class="toc-heading">
+          <span>Navigation</span>
+          <small>DOCUMENT</small>
+        </div>
+
+        <nav id="toc">
+          <a href="#sec1" data-section="sec1"><span>01</span>Résumé exécutif</a>
+          <a href="#sec2" data-section="sec2"><span>02</span>Compréhension des besoins</a>
+          <a href="#sec3" data-section="sec3"><span>03</span>Solution fonctionnelle</a>
+          <a href="#sec4" data-section="sec4"><span>04</span>Architecture & sécurité</a>
+          <a href="#sec5" data-section="sec5"><span>05</span>Méthodologie & gouvernance</a>
+          <a href="#sec6" data-section="sec6"><span>06</span>Conduite du changement</a>
+          <a href="#sec7" data-section="sec7"><span>07</span>Planning & livrables</a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <span class="status-dot"></span>
+          Proposition technique · v1.0.0
+        </div>
+      </div>
+    </aside>
+
+    <main class="document">
+
+      <section id="cover" class="cover document-section">
+        <div class="cover-accent"></div>
+
+        <div class="cover-top">
+          <div class="dinepa-lockup">
+            <strong>DINEPA</strong>
+            <small>Direction Nationale de l'Eau Potable<br>et de l'Assainissement</small>
+          </div>
+          <div class="cover-brand-panel">
+            <img src="logo-numerech.png" alt="Numerech" class="numerech-logo cover-logo">
+            <div class="proposal-tag">OFFRE TECHNIQUE · <b>2026</b></div>
+          </div>
+        </div>
+
+        <div class="cover-content">
+          <p class="eyebrow">PORTAIL NUMÉRIQUE DE SERVICES & RELATION USAGER</p>
+          <h1>Une plateforme numérique<br><em>au service des usagers.</em></h1>
+          <p class="cover-lead">
+            Proposition technique pour le réaménagement et l'outillage du portail web
+            institutionnel et territorial de la DINEPA / OREPA Ouest.
+          </p>
+
+          <div class="cover-author">
+            <div class="author-avatar">MV</div>
+            <div>
+              <span>PRÉPARÉ PAR</span>
+              <strong>Marc Yves St Victor</strong>
+              <p>ITIL PPO/OSA · Directeur Livraison des Solutions Technologiques</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cover-bottom">
+          <div><span>Préparé pour</span><strong>DINEPA / OREPA Ouest</strong></div>
+          <div><span>Document</span><strong>Proposition technique</strong></div>
+          <div><span>Version</span><strong>1.0.0 · Septembre 2026</strong></div>
+        </div>
+      </section>
+
+      <section class="executive-strip">
+        <div class="executive-item">
+          <span class="mini-icon">01</span>
+          <div><strong>Informer</strong><small>Accéder à l'information utile</small></div>
+        </div>
+        <div class="executive-item">
+          <span class="mini-icon">02</span>
+          <div><strong>Payer</strong><small>Faciliter les paiements numériques</small></div>
+        </div>
+        <div class="executive-item">
+          <span class="mini-icon">03</span>
+          <div><strong>Signaler</strong><small>Créer et suivre une demande</small></div>
+        </div>
+        <div class="executive-item">
+          <span class="mini-icon">04</span>
+          <div><strong>Contacter</strong><small>Connecter les canaux de service</small></div>
+        </div>
+      </section>
+
+      <section id="sec1" class="document-section">
+        <div class="section-header">
+          <div class="section-number">01</div>
+          <div>
+            <p class="eyebrow">CADRAGE STRATÉGIQUE</p>
+            <h2>Résumé exécutif</h2>
+          </div>
+        </div>
+
+        <div class="lead-panel">
+          <p>
+            Le projet proposé dépasse le cadre d'une simple refonte graphique. Il vise à faire
+            évoluer le site institutionnel vers un <strong>Portail Numérique de Services et de
+            Relation Usager</strong>, capable de rapprocher les services de la DINEPA des usagers,
+            de structurer les demandes et de soutenir progressivement la digitalisation des
+            processus.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>1.1. Contexte du projet et enjeux</h3>
+          <p>
+            La transformation numérique constitue un levier pour faciliter l'accès à l'information,
+            simplifier certaines démarches, améliorer la traçabilité des demandes et renforcer
+            la proximité entre la DINEPA, les OREPA, les CTE et les usagers.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>1.2. Vision cible</h3>
+          <div class="two-column-cards">
+            <article class="feature-card">
+              <span class="card-kicker">01 · CŒUR MÉTIER</span>
+              <h4>Services & Relation Usager</h4>
+              <p>Espace Usager, demandes, paiements, signalements, suivi des tickets et articulation avec le Centre d'Appels 5959.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-kicker">02 · VITRINE</span>
+              <h4>Institution & Communication</h4>
+              <p>Actualités, projets, travaux, documents, alertes et information territoriale structurée.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>1.3. Objectifs stratégiques</h3>
+          <div class="objective-grid">
+            <div><b>Recouvrement</b><span>Faciliter les paiements numériques et contribuer à l'amélioration des mécanismes de recouvrement.</span></div>
+            <div><b>Modernisation</b><span>Mettre en place un guichet numérique pour les demandes, doléances et signalements.</span></div>
+            <div><b>Proximité</b><span>Structurer l'information et les services selon les OREPA, CTE et zones de desserte.</span></div>
+            <div><b>Transparence</b><span>Valoriser les projets, travaux, communications et informations publiques.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sec2" class="document-section">
+        <div class="section-header">
+          <div class="section-number">02</div>
+          <div>
+            <p class="eyebrow">DIAGNOSTIC</p>
+            <h2>Compréhension des besoins & analyse de l'existant</h2>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>2.1. Évaluation du site actuel</h3>
+          <p>
+            L'analyse du portail public fait apparaître une vocation principalement institutionnelle.
+            Les principaux axes d'évolution concernent l'accès aux services, la structuration des
+            parcours usagers, la territorialisation de l'information et l'intégration progressive
+            des services numériques.
+          </p>
+          <div class="callout warning">
+            <strong>Point de cadrage</strong>
+            <span>Les constats détaillés devront être validés avec la DINEPA pendant la phase de cadrage afin de tenir compte des évolutions récentes du système d'information.</span>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>2.2. Dispositifs numériques existants</h3>
+          <div class="data-table">
+            <div class="table-row table-head"><span>Dispositif</span><span>Rôle dans la cible</span><span>Dépendance</span></div>
+            <div class="table-row"><span><b>Centre d'Appels 5959</b></span><span>Assistance, demandes et suivi</span><span>API / CRM / mécanisme d'échange à confirmer</span></div>
+            <div class="table-row"><span><b>MonCash / Natcash</b></span><span>Paiement numérique</span><span>API, conventions et réconciliation à confirmer</span></div>
+            <div class="table-row"><span><b>Systèmes métier</b></span><span>Facturation, abonnements, données opérationnelles</span><span>Architecture et interfaces à confirmer</span></div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>2.3. Parcours usagers clés</h3>
+          <div class="journey-grid">
+            <div class="journey"><span>01</span><b>INFORMER</b><small>Actualités, travaux, alertes, documents et informations locales.</small></div>
+            <div class="journey"><span>02</span><b>PAYER</b><small>Identification, paiement, confirmation et justificatif selon les systèmes disponibles.</small></div>
+            <div class="journey"><span>03</span><b>SIGNALER</b><small>Soumission, qualification, affectation et suivi d'un ticket.</small></div>
+            <div class="journey"><span>04</span><b>CONTACTER</b><small>5959, contacts, FAQ et canaux d'assistance complémentaires.</small></div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>2.4. Périmètre, hypothèses & dépendances</h3>
+          <ul class="clean-list">
+            <li>Accès et autorisations fournis par la DINEPA pour les systèmes concernés.</li>
+            <li>Disponibilité des API, environnements de test et conventions des partenaires.</li>
+            <li>Disponibilité des données de facturation, abonnés, structures et zones.</li>
+            <li>Validation des workflows, rôles, règles de gestion et contenus par les équipes désignées.</li>
+            <li>Confirmation des exigences de sécurité, de conservation des données et d'hébergement.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="sec3" class="document-section">
+        <div class="section-header">
+          <div class="section-number">03</div>
+          <div>
+            <p class="eyebrow">FONCTIONNEL</p>
+            <h2>Solution fonctionnelle proposée</h2>
+          </div>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar-number">PILIER 1</div>
+          <div>
+            <h3>Portail Numérique de Services & Relation Usager</h3>
+            <p>Le cœur opérationnel de la plateforme, organisé autour de services accessibles, traçables et progressivement intégrés aux systèmes métier.</p>
+          </div>
+        </div>
+
+        <div class="feature-list">
+          <article><span>3.1.1</span><h4>Espace Usager</h4><p>Création de compte, authentification, informations d'abonnement, demandes, documents et préférences de notification selon les données disponibles.</p></article>
+          <article><span>3.1.2</span><h4>Paiement MonCash / Natcash</h4><p>Parcours de paiement sécurisé, gestion des statuts, confirmation et réconciliation selon les capacités des opérateurs et du système métier.</p></article>
+          <article><span>3.1.3</span><h4>Doléances & tickets</h4><p>Catégorisation, description, localisation, pièces jointes, affectation, suivi des statuts et clôture.</p></article>
+          <article><span>3.1.4</span><h4>Centre d'Appels 5959</h4><p>Articulation entre les demandes numériques et les canaux d'assistance existants, selon les capacités d'intégration du système cible.</p></article>
+          <article><span>3.1.5</span><h4>OREPA & CTE</h4><p>Information territoriale, structures, contacts, travaux, interruptions et contenus ciblés par zone.</p></article>
+          <article><span>3.1.6</span><h4>Back-office</h4><p>Gestion des rôles, contenus, tickets, workflows, permissions et journalisation des actions.</p></article>
+          <article><span>3.1.7</span><h4>Tableaux de bord</h4><p>Indicateurs de paiement, Relation Usager, activité opérationnelle et utilisation du portail.</p></article>
+        </div>
+
+        <div class="pillar secondary">
+          <div class="pillar-number">PILIER 2</div>
+          <div>
+            <h3>Vitrine Institutionnelle & Communication</h3>
+            <p>Une couche éditoriale structurée pour informer, documenter et valoriser l'action publique.</p>
+          </div>
+        </div>
+
+        <div class="feature-list compact">
+          <article><span>3.2.1</span><h4>Institution & cadre réglementaire</h4><p>Missions, gouvernance, OREPA, CTE, documents et publications.</p></article>
+          <article><span>3.2.2</span><h4>Actualités & projets</h4><p>Communiqués, travaux, projets, médias et contenus territoriaux.</p></article>
+          <article><span>3.2.3</span><h4>Urgences & alertes</h4><p>Informations prioritaires, interruptions, travaux urgents et alertes ciblées.</p></article>
+          <article><span>3.2.4</span><h4>Newsletter</h4><p>Abonnements, segmentation, campagnes et gestion du consentement.</p></article>
+        </div>
+      </section>
+
+      <section id="sec4" class="document-section">
+        <div class="section-header">
+          <div class="section-number">04</div>
+          <div>
+            <p class="eyebrow">TECHNOLOGIE</p>
+            <h2>Architecture technique, sécurité & UX/UI</h2>
+          </div>
+        </div>
+
+        <div class="architecture-banner">
+          <div>
+            <span class="card-kicker">ARCHITECTURE CIBLE</span>
+            <h3>Modulaire · Découplée · API-First</h3>
+            <p>Une architecture conçue pour intégrer progressivement les services et systèmes existants ou futurs.</p>
+          </div>
+          <div class="architecture-flow">
+            <span>Usagers</span><i>→</i><span>Portail</span><i>→</i><span>API</span><i>→</i><span>Systèmes métier</span>
+          </div>
+        </div>
+
+        <div class="tech-grid">
+          <article><b>Front-end</b><strong>React / Next.js<br>ou Vite</strong><small>Mobile First · Performance</small></article>
+          <article><b>Back-end</b><strong>Python / FastAPI<br>ou Node.js</strong><small>API · Services métier</small></article>
+          <article><b>CMS / Back-office</b><strong>Headless CMS<br>ou sur mesure</strong><small>Contenus · Workflows</small></article>
+          <article><b>Données</b><strong>PostgreSQL<br>+ Redis</strong><small>Transactionnel · Cache</small></article>
+        </div>
+
+        <div class="subsection">
+          <h3>4.1–4.4. Intégration & paiements</h3>
+          <p>
+            Les intégrations seront réalisées via des API sécurisées et, lorsque disponibles, des
+            webhooks ou mécanismes serveur-à-serveur. Les paiements devront gérer les statuts
+            <strong>initiée, en attente, réussie, échouée, annulée, à vérifier et réconciliée</strong>.
+          </p>
+        </div>
+
+        <div class="security-grid">
+          <div><b>Security by Design</b><span>HTTPS/TLS, gestion sécurisée des secrets et séparation des environnements.</span></div>
+          <div><b>OWASP</b><span>Protection contre injections, XSS, CSRF lorsque applicable, abus des API et force brute.</span></div>
+          <div><b>RBAC</b><span>Permissions par rôle, structure, territoire, contenu et type d'action.</span></div>
+          <div><b>Monitoring</b><span>Disponibilité, API, erreurs, ressources, intégrations et anomalies de paiement.</span></div>
+        </div>
+
+        <div class="callout">
+          <strong>Mobile First</strong>
+          <span>Compression des ressources, cache, chargement différé et réduction des appels réseau pour tenir compte des conditions de connectivité mobile.</span>
+        </div>
+      </section>
+
+      <section id="sec5" class="document-section">
+        <div class="section-header">
+          <div class="section-number">05</div>
+          <div>
+            <p class="eyebrow">RÉALISATION</p>
+            <h2>Méthodologie & gouvernance</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div><span>01</span><div><b>Cadrage</b><small>Besoins · architecture · dépendances · spécifications</small></div></div>
+          <div><span>02</span><div><b>Conception</b><small>UX/UI · parcours · architecture détaillée</small></div></div>
+          <div><span>03</span><div><b>Développement</b><small>Modules · intégrations · sprints · démonstrations</small></div></div>
+          <div><span>04</span><div><b>Recette</b><small>Tests fonctionnels · sécurité · charge · validation</small></div></div>
+          <div><span>05</span><div><b>Déploiement</b><small>Migration · mise en production · accompagnement</small></div></div>
+        </div>
+
+        <div class="subsection">
+          <h3>Gouvernance</h3>
+          <p>
+            Une gouvernance claire permettra de distinguer les responsabilités de validation,
+            de gestion des contenus, d'administration technique, de gestion des tickets et de
+            décision sur les évolutions. Les rôles seront confirmés lors du cadrage.
+          </p>
+        </div>
+
+        <div class="two-column-cards">
+          <article class="feature-card"><span class="card-kicker">QUALITÉ</span><h4>Recette & assurance qualité</h4><p>Scénarios de recette, critères d'acceptation, tests fonctionnels, intégration, performance et sécurité.</p></article>
+          <article class="feature-card"><span class="card-kicker">RISQUES</span><h4>Gestion des changements</h4><p>Identification des dépendances, validation des changements, suivi des risques et gestion des arbitrages.</p></article>
+        </div>
+      </section>
+
+      <section id="sec6" class="document-section">
+        <div class="section-header">
+          <div class="section-number">06</div>
+          <div>
+            <p class="eyebrow">ADOPTION</p>
+            <h2>Conduite du changement, formation & transfert</h2>
+          </div>
+        </div>
+
+        <div class="change-grid">
+          <article><span>01</span><h3>Formation</h3><p>Sessions adaptées aux administrateurs DINEPA, gestionnaires OREPA/CTE et utilisateurs du back-office.</p></article>
+          <article><span>02</span><h3>Transfert</h3><p>Transmission des connaissances nécessaires à l'exploitation, à l'administration et à l'évolution de la solution.</p></article>
+          <article><span>03</span><h3>Documentation</h3><p>Documentation technique, procédures d'administration et guides utilisateurs.</p></article>
+          <article><span>04</span><h3>Support</h3><p>Support technique, maintenance corrective et préventive, suivi des incidents et évolutions.</p></article>
+        </div>
+      </section>
+
+      <section id="sec7" class="document-section final-section">
+        <div class="section-header">
+          <div class="section-number">07</div>
+          <div>
+            <p class="eyebrow">EXÉCUTION</p>
+            <h2>Planning, livrables & critères de réussite</h2>
+          </div>
+        </div>
+
+        <div class="delivery-table">
+          <div class="delivery-row head"><span>Phase</span><span>Livrables principaux</span><span>Validation</span></div>
+          <div class="delivery-row"><span><b>01 · Cadrage</b></span><span>Spécifications, architecture cible, backlog, plan projet</span><span>DINEPA</span></div>
+          <div class="delivery-row"><span><b>02 · Conception</b></span><span>Parcours, maquettes UX/UI, design system</span><span>DINEPA</span></div>
+          <div class="delivery-row"><span><b>03 · Réalisation</b></span><span>Portail, back-office, intégrations, tests</span><span>Recette</span></div>
+          <div class="delivery-row"><span><b>04 · Déploiement</b></span><span>Migration, mise en production, formation</span><span>Validation finale</span></div>
+          <div class="delivery-row"><span><b>05 · Accompagnement</b></span><span>Documentation, support, maintenance</span><span>Suivi</span></div>
+        </div>
+
+        <div class="success-panel">
+          <div>
+            <span class="card-kicker">RÉSULTAT ATTENDU</span>
+            <h3>Une plateforme utile, mesurable et évolutive.</h3>
+          </div>
+          <p>
+            Les indicateurs de réussite seront définis avec la DINEPA lors du cadrage afin de
+            mesurer l'adoption des services, l'utilisation des canaux numériques, la performance
+            du traitement des demandes et la disponibilité de la plateforme.
+          </p>
+        </div>
+      </section>
+
+      <footer class="document-footer">
+        <div class="footer-brand">
+          <!-- <img src="logo-numerech.png" alt="Numerech" class="numerech-logo footer-logo"> -->
+        </div>
+        <div>
+          <strong>Marc Yves St Victor</strong>
+          <span>ITIL PPO/OSA · Directeur Livraison des Solutions Technologiques</span>
+        </div>
+        <div>
+          <strong>DINEPA / OREPA Ouest</strong>
+          <span>Proposition technique · 2026</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <button class="back-top no-print" id="backTop" aria-label="Retour en haut">↑</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
