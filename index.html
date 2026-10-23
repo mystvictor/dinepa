@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Proposition technique et financière Numerech pour le réaménagement du site web institutionnel de la DINEPA et de l’OREPA Ouest.">
-  <title>Refonte et Modernisation du Site Web Institutionnel de la DINEPA — Numerech</title>
+  <meta name="description" content="Proposition technique et financière Numerech pour la refonte et la modernisation du site web institutionnel de la DINEPA et de l’OREPA Ouest.">
+  <title>Refonte & Modernisation du Site Web Institutionnel de la DINEPA — Numerech</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -62,7 +62,8 @@
       .no-print, #login-screen { display: none !important; }
       body { background: #fff !important; color: #000 !important; }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .print-only { display: block !important; }
+      .print-only { display: block !important; break-after: page; }
+      .print-break { break-before: page; border-top: 0 !important; }
 
       .shadow-xl, .shadow-md, .shadow-sm { box-shadow: none !important; }
       .layout-grid { display: block !important; }
@@ -70,16 +71,35 @@
       .overflow-x-auto { overflow: visible !important; }
 
       main > section {
-        break-before: page;
         border: 0 !important;
         padding: 0 !important;
       }
-      main > section:first-of-type { break-before: auto; }
+      main > section > div:first-child { break-inside: avoid; break-after: avoid; }
+
+      /* Résumé exécutif : tenir sur une seule page */
+      #resume-executif > div { padding: 20px !important; }
+      #resume-executif h1 { font-size: 26px; line-height: 1.2; }
+      #resume-executif .text-3xl { font-size: 22px; }
+      #resume-executif .grid-cols-2 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+      #resume-executif .p-5 { padding: 12px !important; }
+      #resume-executif p { line-height: 1.5; }
+      #resume-executif .space-y-6 > * + * { margin-top: 10px !important; }
+      #resume-executif a[href="#section-9"] { display: none !important; }
+      #resume-executif .flex-wrap { display: none !important; }
 
       h1, h2, h3, h4 { break-after: avoid; }
-      tr, li, .rounded-xl { break-inside: avoid; }
+      tr, li { break-inside: avoid; }
+      .rounded-xl:not(:has(table)) { break-inside: avoid; }
       thead { display: table-header-group; }
       p, li { orphans: 3; widows: 3; }
+      p, li, td { line-height: 1.5 !important; }
+      main .space-y-8 > * + * { margin-top: 20px !important; }
+      main .space-y-6 > * + * { margin-top: 16px !important; }
+      .rounded-xl.p-5 { padding: 16px !important; }
+
+      /* Bandeau de prix : plus compact à l’impression */
+      #section-9 .bg-dinepa-dark { padding: 18px !important; }
+      #section-9 .bg-dinepa-dark .text-4xl { font-size: 30px; }
 
       a { color: inherit !important; text-decoration: none !important; }
     }
@@ -130,7 +150,7 @@
           <img src="https://dinepa.numerech.net/logo-numerech.png" alt="Numerech Logo" class="h-8 object-contain">
           <div class="hidden sm:block h-6 w-px bg-slate-200"></div>
           <div class="hidden sm:block">
-            <span class="block text-xs font-extrabold uppercase tracking-wider text-dinepa-dark">Refonte du Site Web</span>
+            <span class="block text-xs font-extrabold uppercase tracking-wider text-dinepa-dark">Refonte - Modernisation du Site Web</span>
             <span class="block text-[11px] text-slate-500">DINEPA / OREPA Ouest · 2026</span>
           </div>
         </div>
@@ -268,7 +288,7 @@
               <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold m-0">Forfait global</p>
-                  <p class="text-2xl font-extrabold text-dinepa-dark m-0 whitespace-nowrap">12 500 USD</p>
+                  <p class="text-2xl font-extrabold text-dinepa-dark m-0 whitespace-nowrap">15 000 USD</p>
                 </div>
                 <div class="text-sm text-slate-600 space-y-1">
                   <p class="m-0">Paiement en gourdes haïtiennes au taux de référence de la BRH.</p>
@@ -279,6 +299,11 @@
                   <span>Offre financière</span>
                 </a>
               </div>
+
+              <!-- Version imprimée compacte du forfait -->
+              <p class="print-only text-sm text-slate-700 m-0">
+                <strong>Forfait global : 15 000 USD</strong> — paiement en gourdes haïtiennes au taux de référence de la BRH — échéancier 50 % / 20 % / 30 % adossé aux jalons du mandat.
+              </p>
             </div>
           </section>
 
@@ -434,7 +459,7 @@
 </div>
 
 <!-- SECTION 1.4 : RÉSULTAT GLOBAL RECHERCHÉ -->
-<div id="resultat" class="space-y-6 border-t border-slate-100 pt-6">
+<div id="resultat" class="print-break space-y-6 border-t border-slate-100 pt-6">
   <div class="flex items-center gap-3">
     <div class="w-10 h-10 rounded-xl bg-dinepa-light text-dinepa-blue flex items-center justify-center shrink-0">
       <i class="fa-solid fa-bullseye text-lg"></i>
@@ -613,7 +638,7 @@
   </div>
 
   <!-- 2.3. Résultats attendus -->
-  <div id="resultats-attendus" class="space-y-6 border-t border-slate-100 pt-6">
+  <div id="resultats-attendus" class="print-break space-y-6 border-t border-slate-100 pt-6">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 rounded-xl bg-dinepa-light text-dinepa-blue flex items-center justify-center shrink-0">
         <i class="fa-solid fa-square-poll-vertical text-lg"></i>
@@ -2467,7 +2492,7 @@
             </div>
 
             <!-- 7.8. Suivi des mesures de sécurité pendant l’assistance -->
-            <div id="suivi-securite-assistance" class="space-y-4 border-t border-slate-100 pt-6">
+            <div id="suivi-securite-assistance" class="print-break space-y-4 border-t border-slate-100 pt-6">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-dinepa-light text-dinepa-blue flex items-center justify-center shrink-0">
                   <i class="fa-solid fa-chart-line text-lg"></i>
@@ -2765,7 +2790,7 @@
             </div>
 
             <!-- 8.7. Limites et responsabilités pendant la période d’assistance -->
-            <div id="limites-responsabilites" class="space-y-4 border-t border-slate-100 pt-6">
+            <div id="limites-responsabilites" class="print-break space-y-4 border-t border-slate-100 pt-6">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-dinepa-light text-dinepa-blue flex items-center justify-center shrink-0">
                   <i class="fa-solid fa-scale-balanced text-lg"></i>
@@ -2827,8 +2852,8 @@
 
               <div class="p-8 rounded-2xl bg-dinepa-dark text-white text-center space-y-3">
                 <p class="text-xs uppercase tracking-widest text-sky-200 font-bold">Prix forfaitaire de la prestation</p>
-                <p class="text-4xl sm:text-5xl font-extrabold whitespace-nowrap">12 500 USD</p>
-                <p class="text-xs text-sky-100">Douze mille cinq cents dollars américains (12 500 USD)</p>
+                <p class="text-4xl sm:text-5xl font-extrabold whitespace-nowrap">15 000 USD</p>
+                <p class="text-xs text-sky-100">Quinze mille dollars américains (15 000 USD)</p>
               </div>
 
               <!-- Encadré : modalité de règlement -->
@@ -2844,7 +2869,7 @@
             </div>
 
             <!-- 9.2. Décomposition financière -->
-            <div id="decomposition-financiere" class="space-y-4 border-t border-slate-100 pt-6">
+            <div id="decomposition-financiere" class="print-break space-y-4 border-t border-slate-100 pt-6">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-dinepa-light text-dinepa-blue flex items-center justify-center shrink-0">
                   <i class="fa-solid fa-calculator text-lg"></i>
@@ -2873,17 +2898,17 @@
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
                       <td class="px-4 py-3.5 font-extrabold text-slate-400 text-center">2</td>
                       <td class="px-5 py-3.5 text-slate-600 text-xs leading-relaxed">Inventaire, classification et organisation des contenus</td>
-                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">500</td>
+                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">1 000</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="px-4 py-3.5 font-extrabold text-slate-400 text-center">3</td>
                       <td class="px-5 py-3.5 text-slate-600 text-xs leading-relaxed">Architecture de navigation, organisation de l’information et conception de l’interface</td>
-                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">2 000</td>
+                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">2 500</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
                       <td class="px-4 py-3.5 font-extrabold text-slate-400 text-center">4</td>
                       <td class="px-5 py-3.5 text-slate-600 text-xs leading-relaxed">Modernisation de la plateforme, de l’interface et des fonctionnalités prévues au TDR</td>
-                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">4 000</td>
+                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">4 500</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="px-4 py-3.5 font-extrabold text-slate-400 text-center">5</td>
@@ -2898,18 +2923,18 @@
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="px-4 py-3.5 font-extrabold text-slate-400 text-center">7</td>
                       <td class="px-5 py-3.5 text-slate-600 text-xs leading-relaxed">Documentation, formation et transfert de compétences</td>
-                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">500</td>
+                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">1 000</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
                       <td class="px-4 py-3.5 font-extrabold text-slate-400 text-center">8</td>
                       <td class="px-5 py-3.5 text-slate-600 text-xs leading-relaxed">Garantie et assistance technique pendant 24 mois</td>
-                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">2 500</td>
+                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">3 000</td>
                     </tr>
                   </tbody>
                   <tfoot class="bg-dinepa-dark text-white">
                     <tr>
                       <td colspan="2" class="px-5 py-4 text-xs font-extrabold uppercase tracking-widest">Total forfaitaire</td>
-                      <td class="px-5 py-4 text-sm font-extrabold text-right whitespace-nowrap text-dinepa-accent">12 500 USD</td>
+                      <td class="px-5 py-4 text-sm font-extrabold text-right whitespace-nowrap text-dinepa-accent">15 000</td>
                     </tr>
                   </tfoot>
                 </table>
@@ -2951,26 +2976,26 @@
                       <td class="px-5 py-3.5 font-bold text-dinepa-dark">Premier paiement</td>
                       <td class="px-5 py-3.5 text-slate-600 text-xs leading-relaxed">Validation de l’audit, de l’inventaire et de la proposition de réorganisation</td>
                       <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">50 %</td>
-                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">6 250</td>
+                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">7 500</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
                       <td class="px-5 py-3.5 font-bold text-dinepa-dark">Deuxième paiement</td>
                       <td class="px-5 py-3.5 text-slate-600 text-xs leading-relaxed">Présentation de la version de test du site modernisé</td>
                       <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">20 %</td>
-                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">2 500</td>
+                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">3 000</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="px-5 py-3.5 font-bold text-dinepa-dark">Paiement final</td>
                       <td class="px-5 py-3.5 text-slate-600 text-xs leading-relaxed">Réception finale et mise en production du site</td>
                       <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">30 %</td>
-                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">3 750</td>
+                      <td class="px-5 py-3.5 text-slate-700 text-xs font-semibold text-right whitespace-nowrap">4 500</td>
                     </tr>
                   </tbody>
                   <tfoot class="bg-dinepa-dark text-white">
                     <tr>
                       <td colspan="2" class="px-5 py-4 text-xs font-extrabold uppercase tracking-widest">Total</td>
                       <td class="px-5 py-4 text-xs font-extrabold text-right whitespace-nowrap text-dinepa-accent">100 %</td>
-                      <td class="px-5 py-4 text-sm font-extrabold text-right whitespace-nowrap text-dinepa-accent">12 500</td>
+                      <td class="px-5 py-4 text-sm font-extrabold text-right whitespace-nowrap text-dinepa-accent">15 000</td>
                     </tr>
                   </tfoot>
                 </table>
@@ -3004,7 +3029,7 @@
             </div>
 
             <!-- 9.5. Engagement financier -->
-            <div id="engagement-financier" class="space-y-4 border-t border-slate-100 pt-6">
+            <div id="engagement-financier" class="print-break space-y-4 border-t border-slate-100 pt-6">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-dinepa-light text-dinepa-blue flex items-center justify-center shrink-0">
                   <i class="fa-solid fa-signature text-lg"></i>
